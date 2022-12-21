@@ -13,28 +13,38 @@
         <h2>Enter your support query</h2>
         <ul>
           <li>
-            <label for="uname">User name:</label>
+            <label for="uname">User name:</label><br>
             <input type="text" 
                    name="uname" 
                    id="uname" 
                    required>
           </li>
+          <br>
           <li>
-            <label for="email">Email address:</label>
-            <input type="email" name="email" id="email" required>
+            <p>
+              <label for="mail">
+                <span>Please enter an email address:</span>
+                <input type="email" id="mail" name="mail" required minlength="8" />
+                <span class="error" aria-live="polite"></span>
+              </label>
+            </p>
           </li>
+          <br>
           <li>
-            <label for="phone">Phone number:</label>
+            <label for="phone">Phone number:</label><br>
             <input type="tel" 
                    name="phone" 
                    id="phone" 
+                   minlength="10"
                    required>
           </li>
+          <br>
           <li>
-            <label for="comment">Comment:</label>
+            <label for="comment">Comment:</label><br>
             <textarea name="comment" id="comment" maxlength="200">
             </textarea>
           </li>
+          <br>
           <li>
             <button>Submit comment</button>
           </li>
