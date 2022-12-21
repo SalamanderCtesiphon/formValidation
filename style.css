@@ -40,3 +40,17 @@ form {
   background-color: rgba(128, 128, 128, 0.091);
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
 }
+
+small {
+  color: red;
+  font-size: 12px;
+}
+
+.error {
+  display: none;
+}
+
+button {
+  height: 3vh;
+  width: 4vw;
+}
