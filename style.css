@@ -9,3 +9,7 @@ body {
   * {
     box-sizing: border-box;
   }
+
+  .is-invalid {
+    border: 1px solid red;
+  }
