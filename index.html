@@ -9,48 +9,29 @@
     <title>Form Validation</title>
 </head>
 <body>
-    <form>
-        <h2>Enter your support query</h2>
-        <ul>
-          <li>
-            <label for="uname">User name:</label><br>
-            <input type="text" 
-                   name="uname" 
-                   id="uname" 
-                   required>
-          </li>
-          <br>
-          <li>
-            <p>
-              <label for="mail">
-                <span>Please enter an email address:</span>
-                <input type="email" id="mail" name="mail" required minlength="8" />
-                <span class="error" aria-live="polite"></span>
-              </label>
-            </p>
-          </li>
-          <br>
-          <li>
-            <label for="phone">Phone number:</label><br>
-            <input type="tel" 
-                   name="phone" 
-                   id="phone" 
-                   minlength="10"
-                   required>
-          </li>
-          <br>
-          <li>
-            <label for="comment">Comment:</label><br>
-            <textarea name="comment" id="comment" maxlength="200">
-            </textarea>
-          </li>
-          <br>
-          <li>
-            <button>Submit comment</button>
-          </li>
-        </ul>
-      </form>   
-      
+  <form action="get">
+    <div class="form-control">
+      <label for="email">Email</label><br>
+      <input type="text" id="email" placeholder="Enter email"><br>
+      <small>Error message</small>
+    </div><br>
+    <div class="form-control">
+      <label for="country">Country</label><br>
+      <input type="text" id="country" placeholder="Enter country"><br>
+      <small>Error message</small>
+    </div><br>
+    <div class="form-control">
+      <label for="password">Password</label><br>
+      <input type="password" id="password" placeholder="Enter password"><br>
+      <small>Error message</small>
+    </div><br>
+    <div class="form-control">
+      <label for="password2">Confirm Password</label><br>
+      <input type="password" id="password2" placeholder="Confirm password"><br>
+      <small>Error message</small>
+    </div><br>
+    <button>Submit</button>
+  </form>
     
 </body>
 </html>
