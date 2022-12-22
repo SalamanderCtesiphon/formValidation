@@ -44,7 +44,7 @@ function showError() {
   }
 
   // Set the styling appropriately
-  emailError.className = "error active";
+  emailError.className = "errorActive";
 }
 
 /* form.addEventListener('submit', (event) => {
