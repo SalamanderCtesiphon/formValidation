@@ -32,7 +32,33 @@ function showError() {
   email.className = "invalid";
 }
 
-const country = document.getElementById("country");
-const countryError = document.querySelector(".errorCountry");
+
+// create a funciton that ensures password and confirm password match and display a custom error message if they don't match
+
+const password = document.getElementById("password");
+const confirmPassword = document.getElementById("password2");
+const passwordError = document.querySelector(".passError");
+
+confirmPassword.addEventListener("input", (event) => {
+  if (password.value === confirmPassword.value) {
+    passwordError.textContent = "";
+    passwordError.className = "passError";
+    confirmPassword.className = "valid";
+  } else {
+    showPassError();
+  }
+});
+
+
+function showPassError() {
+  if (password.value !== confirmPassword.value) {
+    passwordError.textContent = " Passwords do not match";
+  }
+
+  passwordError.className = "passErrorActive";
+  confirmPassword.className = "invalid";
+
+}
+
 
 
