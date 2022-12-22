@@ -1,4 +1,4 @@
 # formValidation
-working examples
+web form validation using javascript
 
 learning a little regex
