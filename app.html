@@ -7,7 +7,11 @@
     <title>Document</title>
 </head>
 <body>
-    <img src="#">
+    <img src="#"><br>
+    <button onclick="fetchGif()">Fetch Gif</button>
+    <label for="search">Search for Gif</label><br>
+    <input type="text" id="search"><br>
+    <button onclick="fetchGif()">Fetch Gif</button>
   <script>
      const img = document.querySelector('img');
      fetch('https://api.giphy.com/v1/gifs/translate?api_key=pzb57nxBZlnj5HMb6GY1fv3YHYFtJa7K&s=cats', {mode: 'cors'})
@@ -17,6 +21,30 @@
      .then(function(response) {
       img.src = response.data.images.original.url;
     });
+
+    function fetchGif() {
+      const img = document.querySelector('img');
+      fetch('https://api.giphy.com/v1/gifs/translate?api_key=pzb57nxBZlnj5HMb6GY1fv3YHYFtJa7K&s=cats', {mode: 'cors'})
+      .then(function(response) {
+        return response.json();
+      })
+      .then(function(response) {
+        img.src = response.data.images.original.url;
+      });
+    }
+
+    const search = document.querySelector('#search');
+    search.addEventListener('keyup', function(event) {
+      if (event.key === 'Enter') {
+        fetchGif();
+      }
+    });
+
+    
+
+
+
+
   </script>
 </body>
 </html>
