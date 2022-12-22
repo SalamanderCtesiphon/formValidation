@@ -12,6 +12,7 @@ email.addEventListener("input", (event) => {
     // is valid, we remove the error message.
     emailError.textContent = ""; // Reset the content of the message
     emailError.className = "error"; // Reset the visual state of the message
+    email.className = "valid";
   } else {
     // If there is still an error, show the correct error
     showError();
@@ -45,6 +46,7 @@ function showError() {
 
   // Set the styling appropriately
   emailError.className = "errorActive";
+  email.className = "invalid";
 }
 
 /* form.addEventListener('submit', (event) => {
